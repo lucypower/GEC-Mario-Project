@@ -15,8 +15,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GECMarioProject.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="SDL2\SDL\SDL2.lib" />
+    <Library Include="SDL2\SDL\SDL2_image.lib" />
+    <Library Include="SDL2\SDL\SDL2_mixer.lib" />
+    <Library Include="SDL2\SDL\SDL2main.lib" />
   </ItemGroup>
 </Project>
