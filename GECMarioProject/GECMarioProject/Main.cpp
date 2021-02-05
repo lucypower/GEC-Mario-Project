@@ -102,11 +102,7 @@ void Render()
 
 	g_texture->Render(Vector2D(), SDL_FLIP_NONE);
 
-	// set where to render the texture
-	//SDL_Rect renderLocation = { 0,0,SCREEN_WIDTH, SCREEN_HEIGHT };
 	Render();
-	// render to screen
-	//SDL_RenderCopyEx(g_renderer, g_texture, NULL, &renderLocation, 0, NULL, SDL_FLIP_NONE);
 
 	// update the screen
 	SDL_RenderPresent(g_renderer);
