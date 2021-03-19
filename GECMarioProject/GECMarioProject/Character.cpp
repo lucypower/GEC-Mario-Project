@@ -54,6 +54,11 @@ void Character::Update(float deltaTime, SDL_Event e)
 		case SDLK_RIGHT:
 			m_moving_right = true;
 		}
+	case SDLK_UP:
+		if (m_can_jump)
+		{
+			Jump();
+		}
 		break;
 	case SDL_KEYUP:
 		switch (e.key.keysym.sym)
@@ -79,13 +84,7 @@ void Character::Update(float deltaTime, SDL_Event e)
 			m_jumping = false;
 
 		AddGravity(deltaTime);
-
-		if (m_can_jump)
-		{
-
-		}
 	}
-
 }
 
 void Character::SetPosition(Vector2D new_position)
@@ -114,7 +113,7 @@ void Character::AddGravity(float deltaTime)
 {
 	if ((m_position.y + 64) <= SCREEN_HEIGHT)
 	{
-		m_position.y = deltaTime * GRAVITY;
+		m_position.y += deltaTime * GRAVITY;
 	}
 	else
 	{

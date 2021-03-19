@@ -13,10 +13,6 @@ public:
 
 	virtual void Render();
 	virtual void Update(float deltaTime, SDL_Event e);
-	virtual void AddGravity(float deltaTime);
-	void SetPosition(Vector2D new_position);
-	Vector2D GetPosition();
-	void Jump();
 
 protected:
 
@@ -26,9 +22,6 @@ protected:
 
 	bool m_moving_left;
 	bool m_moving_right;
-
-	virtual void MoveLeft(float deltaTime);
-	virtual void MoveRight(float deltaTime);
 
 	bool m_jumping;
 	bool m_can_jump;
