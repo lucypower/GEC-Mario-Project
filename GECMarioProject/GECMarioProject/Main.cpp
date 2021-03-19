@@ -102,8 +102,6 @@ void Render()
 
 	g_texture->Render(Vector2D(), SDL_FLIP_NONE);
 
-	Render();
-
 	// update the screen
 	SDL_RenderPresent(g_renderer);
 }

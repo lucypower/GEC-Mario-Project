@@ -4,7 +4,7 @@
 
 Texture2D::Texture2D(SDL_Renderer* renderer)
 {
-
+	m_renderer = renderer; // takes renderer pointer from main file and sets m_renderer equal to it
 }
 
 Texture2D::~Texture2D()
