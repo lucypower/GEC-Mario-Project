@@ -3,14 +3,17 @@
 #define _GAMESCREENLEVEL1_H
 #include "GameScreen.h"
 #include "Commons.h"
+#include "Character.h"
 
 class Texture2D; // forward declaration saying we will use this class
+class Character;
 
 class GameScreenLevel1 : GameScreen // inheriting functionality from GameScreen class
 {
 private:
 
 	Texture2D* m_background_texture;
+	Character* my_character;
 
 	bool SetUpLevel();
 
