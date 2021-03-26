@@ -44,33 +44,6 @@ void Character::Update(float deltaTime, SDL_Event e)
 		MoveRight(deltaTime);
 	}
 	
-	switch (e.type)
-	{
-	case SDL_KEYDOWN:
-		switch (e.key.keysym.sym)
-		{
-		case SDLK_LEFT:
-			m_moving_left = true;
-		case SDLK_RIGHT:
-			m_moving_right = true;
-		}
-	case SDLK_UP:
-		if (m_can_jump)
-		{
-			Jump();
-		}
-		break;
-	case SDL_KEYUP:
-		switch (e.key.keysym.sym)
-		{
-		case SDLK_LEFT:
-			m_moving_left = false;
-		case SDLK_RIGHT:
-			m_moving_right = false;
-		}
-		break;
-	}
-
 	if (m_jumping)
 	{
 		// adjust position

@@ -1,6 +1,7 @@
 #include "GameScreenLevel1.h"
 #include <iostream>
 #include "Texture2D.h"
+#include "CharacterMario.h"
 
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {
@@ -37,5 +38,5 @@ bool GameScreenLevel1::SetUpLevel()
 	}
 
 	// set up player character
-	my_character = new Character(m_renderer, "Images/Mario.png", Vector2D(64, 330));
+	my_character = new CharacterMario(m_renderer, "Images/Mario.png", Vector2D(64, 330));
 }
