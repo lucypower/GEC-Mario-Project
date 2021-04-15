@@ -13,7 +13,8 @@ class GameScreenLevel1 : GameScreen // inheriting functionality from GameScreen 
 private:
 
 	Texture2D* m_background_texture;
-	Character* my_character;
+	Character* mario;
+	Character* luigi;
 
 	bool SetUpLevel();
 
