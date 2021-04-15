@@ -1,10 +1,11 @@
 #include "Character.h"
 #include "constants.h"
 
-Character::Character(SDL_Renderer* renderer, std::string imagePath, Vector2D start_position)
+Character::Character(SDL_Renderer* renderer, std::string imagePath, Vector2D start_position, LevelMap* map)
 {
 	m_renderer = renderer;
 	m_position = start_position;
+	m_current_level_map = map;
 	m_texture = new Texture2D(m_renderer);
 	if (!m_texture->LoadFromFile(imagePath))
 	{
@@ -57,7 +58,21 @@ void Character::Update(float deltaTime, SDL_Event e)
 		if (m_jump_force <= 0.0f)
 			m_jumping = false;
 	}
-	AddGravity(deltaTime);
+	
+	// collision position variables
+	int centralX_position = (int)(m_position.x + (m_texture->GetWidth() * 0.5)) / TILE_WIDTH;
+	int foot_position = (int)(m_position.y + m_texture->GetHeight()) / TILE_HEIGHT;
+
+	// deal with gravity
+	if (m_current_level_map->GetTileAt(foot_position, centralX_position) == 0)
+	{
+		AddGravity(deltaTime);
+	}
+	else
+	{
+		// collided with ground so we can jump again
+		m_can_jump = true;
+	}
 }
 
 void Character::SetPosition(Vector2D new_position)
