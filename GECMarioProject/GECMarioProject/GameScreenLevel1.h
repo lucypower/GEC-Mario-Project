@@ -5,9 +5,12 @@
 #include "Commons.h"
 #include "Character.h"
 #include "LevelMap.h"
+#include "PowBlock.h"
+#include "Collisions.h"
 
 class Texture2D; // forward declaration saying we will use this class
 class Character;
+class PowBlock;
 
 class GameScreenLevel1 : GameScreen // inheriting functionality from GameScreen class
 {
@@ -22,6 +25,8 @@ private:
 
 	void SetLevelMap();
 
+	PowBlock* m_pow_block;
+
 public:
 
 	GameScreenLevel1(SDL_Renderer* renderer);
@@ -29,6 +34,7 @@ public:
 
 	void Render() override;
 	void Update(float deltaTime, SDL_Event e) override;
+	void UpdatePowBlock();
 
 };
 
