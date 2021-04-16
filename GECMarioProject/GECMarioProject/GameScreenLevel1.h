@@ -4,6 +4,7 @@
 #include "GameScreen.h"
 #include "Commons.h"
 #include "Character.h"
+#include "LevelMap.h"
 
 class Texture2D; // forward declaration saying we will use this class
 class Character;
@@ -15,8 +16,11 @@ private:
 	Texture2D* m_background_texture;
 	Character* mario;
 	Character* luigi;
+	LevelMap* m_level_map;
 
 	bool SetUpLevel();
+
+	void SetLevelMap();
 
 public:
 
