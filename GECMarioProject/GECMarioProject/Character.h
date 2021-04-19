@@ -54,6 +54,8 @@ public:
 			m_texture->GetWidth(), m_texture->GetHeight());
 	}
 
+	bool IsJumping() { return m_jumping == false; }
+	void CancelJump() { return; }
 };
 
 #endif // _CHARACTER_H
