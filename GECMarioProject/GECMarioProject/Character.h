@@ -19,17 +19,14 @@ protected:
 
 	bool m_moving_left;
 	bool m_moving_right;
-
-	virtual void MoveLeft(float deltaTime);
-	virtual void MoveRight(float deltaTime);
-
 	bool m_jumping;
 	bool m_can_jump;
 	float m_jump_force;
-
 	float m_collision_radius;
-
 	bool m_alive;
+
+	virtual void MoveLeft(float deltaTime);
+	virtual void MoveRight(float deltaTime);	
 
 private:	
 
@@ -46,21 +43,17 @@ public:
 	void SetPosition(Vector2D new_position);
 	Vector2D GetPosition();
 	void Jump();
-
 	float GetCollisionRadius();
-
+	bool IsJumping() { return m_jumping; }
+	void CancelJump() { return; }
+	void SetAlive(bool isAlive);
+	bool GetAlive() { return m_alive; }
 	Rect2D GetCollisionsBox() {
 		return Rect2D(m_position.x, m_position.y,
 			m_texture->GetWidth(), m_texture->GetHeight());
-	}
-
-	bool IsJumping() { return m_jumping; }
-	void CancelJump() { return; }
+	}	
 
 	FACING m_facing_direction;
-
-	void SetAlive(bool isAlive);
-	bool GetAlive() { return m_alive; }
 };
 
 #endif // _CHARACTER_H

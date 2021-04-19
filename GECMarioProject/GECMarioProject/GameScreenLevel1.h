@@ -23,24 +23,19 @@ private:
 	Character* luigi;
 	Character* koopa;
 	LevelMap* m_level_map;
+	PowBlock* m_pow_block;
 
 	bool SetUpLevel();
-
-	void SetLevelMap();
-
-	PowBlock* m_pow_block;
+	void UpdateEnemies(float deltaTime, SDL_Event e);
+	void CreateKoopa(Vector2D position, FACING direction, float speed);
+	void SetLevelMap();	
+	void DoScreenShake();
 
 	bool m_screenshake;
 	float m_shake_time;
 	float m_wobble;
 	float m_background_yPos;
-
-	float koopaCountdown;
-
-	void DoScreenShake();
-
-	void UpdateEnemies(float deltaTime, SDL_Event e);
-	void CreateKoopa(Vector2D position, FACING direction, float speed);
+	float koopaCountdown;	
 
 	std::vector<CharacterKoopa*> m_enemies;
 

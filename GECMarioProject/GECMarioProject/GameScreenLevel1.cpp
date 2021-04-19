@@ -30,7 +30,7 @@ void GameScreenLevel1::Render()
 	// draw the enemies
 	for (int i = 0; i < m_enemies.size(); i++)
 	{
-		m_enemies[i]->Render();
+		m_enemies[i] ->Render();
 	}
 
 	// draw the background
@@ -93,7 +93,7 @@ bool GameScreenLevel1::SetUpLevel()
 
 	// set up player character
 	mario = new CharacterMario(m_renderer, "Images/Mario.png", Vector2D(64, 330), m_level_map);
-	luigi = new CharacterLuigi(m_renderer, "Images/Luigi.png", Vector2D(448, 330), m_level_map);
+	luigi = new CharacterLuigi(m_renderer, "Images/Luigi.png", Vector2D(384, 330), m_level_map);
 }
 
 void GameScreenLevel1::SetLevelMap()
@@ -183,13 +183,15 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 				{
 					if (Collisions::Instance()->Circle(m_enemies[i], mario))
 					{
+						std::cout << "Circle hit!" << std::endl;
+
 						if (m_enemies[i]->GetInjured())
 						{
 							m_enemies[i]->SetAlive(false);
 						}
 						else
 						{
-							// kill mario
+							mario->SetAlive(false);
 						}
 					}
 				}

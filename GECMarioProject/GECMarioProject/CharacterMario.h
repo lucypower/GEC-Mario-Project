@@ -13,7 +13,7 @@ public:
 
 protected:
 
-	virtual void Update(float deltaTime, SDL_Event e);
+	void Update(float deltaTime, SDL_Event e) override;
 };
 
 #endif
