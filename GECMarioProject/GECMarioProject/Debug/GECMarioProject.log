@@ -1,23 +1,5 @@
-﻿  GameScreenLevel1.cpp
+﻿  CharacterLuigi.cpp
 C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(54,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(54,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  GameScreenManager.cpp
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(54,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(54,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  PowBlock.cpp
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(15,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(16,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(8,50): warning C4390: ';': empty controlled statement found; is this the intent?
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(34,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(37,43): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(37,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(37,62): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(37,62): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(41,3): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(41,3): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(41,22): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(41,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel1.cpp(68): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
-GameScreenLevel1.obj : error LNK2019: unresolved external symbol "public: struct Rect2D __thiscall PowBlock::GetCollisionBox(void)" (?GetCollisionBox@PowBlock@@QAE?AURect2D@@XZ) referenced in function "public: void __thiscall GameScreenLevel1::UpdatePowBlock(void)" (?UpdatePowBlock@GameScreenLevel1@@QAEXXZ)
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\Debug\GECMarioProject.exe : fatal error LNK1120: 1 unresolved externals
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterLuigi.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  GECMarioProject.vcxproj -> C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\Debug\GECMarioProject.exe

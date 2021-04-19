@@ -56,3 +56,5 @@ void PowBlock::TakeHit()
 		m_level_map->ChangeTileAt(8, 8, 0);
 	}
 }
+
+
