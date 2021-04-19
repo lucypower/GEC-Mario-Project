@@ -7,7 +7,7 @@ PowBlock::PowBlock(SDL_Renderer* renderer, LevelMap* map)
 	m_texture = new Texture2D(renderer);
 	if (!m_texture->LoadFromFile(imagePath.c_str()));
 	{
-		std::cout << "Failed to load texture" << std::endl;
+		std::cout << "Failed to load texture 1" << std::endl;
 		return;
 	}
 
@@ -41,7 +41,7 @@ void PowBlock::Render()
 		m_single_sprite_w, m_single_sprite_h };
 
 		// draw the sprite
-		m_texture->Render(portion_of_sprite, dest_rect, SDL_FLIP_NONE);
+		m_texture->Render(portion_of_sprite, dest_rect, SDL_FLIP_NONE, 0.0f);
 	}
 }
 
