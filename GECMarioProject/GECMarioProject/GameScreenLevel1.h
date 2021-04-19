@@ -7,6 +7,8 @@
 #include "LevelMap.h"
 #include "PowBlock.h"
 #include "Collisions.h"
+#include <vector>
+#include "CharacterKoopa.h"
 
 class Texture2D; // forward declaration saying we will use this class
 class Character;
@@ -19,6 +21,7 @@ private:
 	Texture2D* m_background_texture;
 	Character* mario;
 	Character* luigi;
+	Character* koopa;
 	LevelMap* m_level_map;
 
 	bool SetUpLevel();
@@ -32,7 +35,14 @@ private:
 	float m_wobble;
 	float m_background_yPos;
 
+	float koopaCountdown;
+
 	void DoScreenShake();
+
+	void UpdateEnemies(float deltaTime, SDL_Event e);
+	void CreateKoopa(Vector2D position, FACING direction, float speed);
+
+	std::vector<CharacterKoopa*> m_enemies;
 
 public:
 
@@ -42,7 +52,6 @@ public:
 	void Render() override;
 	void Update(float deltaTime, SDL_Event e) override;
 	void UpdatePowBlock();
-
 };
 
 #endif // _GAMESCREENLEVEL1_H

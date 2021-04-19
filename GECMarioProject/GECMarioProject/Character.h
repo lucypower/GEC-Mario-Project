@@ -29,9 +29,9 @@ protected:
 
 	float m_collision_radius;
 
-private:
+	bool m_alive;
 
-	FACING m_facing_direction;
+private:	
 
 	LevelMap* m_current_level_map;
 
@@ -54,8 +54,13 @@ public:
 			m_texture->GetWidth(), m_texture->GetHeight());
 	}
 
-	bool IsJumping() { return m_jumping == false; }
+	bool IsJumping() { return m_jumping; }
 	void CancelJump() { return; }
+
+	FACING m_facing_direction;
+
+	void SetAlive(bool isAlive);
+	bool GetAlive() { return m_alive; }
 };
 
 #endif // _CHARACTER_H
