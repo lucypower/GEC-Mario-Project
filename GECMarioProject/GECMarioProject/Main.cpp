@@ -28,6 +28,12 @@ int main(int argc, char* args[])
 	// check if sdl was setup correctly
 	if (InitSDL())
 	{
+		LoadMusic("Music/Mario.mp3");
+		if (Mix_PlayingMusic() == 0)
+		{
+			Mix_PlayMusic(g_music, -1);
+		}
+
 		// flag to check if we wish to quit
 		bool quit = false;
 		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL1);
@@ -39,13 +45,7 @@ int main(int argc, char* args[])
 		{
 			Render();
 			quit = Update();
-		}
-
-		LoadMusic("Music/Mario.wav");
-		if (Mix_PlayingMusic() == 0)
-		{
-			Mix_PlayMusic(g_music, -1);
-		}
+		}		
 	}
 
 	CloseSDL();

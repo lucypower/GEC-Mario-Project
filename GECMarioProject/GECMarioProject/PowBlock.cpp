@@ -5,12 +5,13 @@ PowBlock::PowBlock(SDL_Renderer* renderer, LevelMap* map)
 {
 	std::string imagePath = "Images/PowBlock.png";
 	m_texture = new Texture2D(renderer);
-	if (!m_texture->LoadFromFile(imagePath.c_str()));
+	if (!m_texture->LoadFromFile(imagePath.c_str()))
 	{
 		std::cout << "Failed to load texture 1" << std::endl;
 		return;
 	}
 
+	m_renderer = renderer;
 	m_level_map = map;
 	m_single_sprite_w = m_texture->GetWidth() / 3; // there are three images in this sprite
 	m_single_sprite_h = m_texture->GetHeight();

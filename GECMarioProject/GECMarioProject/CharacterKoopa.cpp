@@ -80,11 +80,11 @@ void CharacterKoopa::Render()
 	// variable to hold the left position of the sprite we want to draw
 	int left = 0.0f;
 
-	// if injured move the left position to be the left position of the seond image of the sprite sheet
+	// if injured move the left position to be the left position of the second image of the sprite sheet
 	if (m_injured)
 		left = m_single_sprite_w;
 
-	// get the portio nof the sprite sheet you want to draw
+	// get the portion of the sprite sheet you want to draw
 	SDL_Rect portion_of_sprite = { left, 0, m_single_sprite_w, m_single_sprite_h };
 
 	// determine where you want it drawn

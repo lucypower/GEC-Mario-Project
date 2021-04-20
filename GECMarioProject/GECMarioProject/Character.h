@@ -45,7 +45,7 @@ public:
 	void Jump();
 	float GetCollisionRadius();
 	bool IsJumping() { return m_jumping; }
-	void CancelJump() { return; }
+	void CancelJump() { return; } // returning m_jumping as false
 	void SetAlive(bool isAlive);
 	bool GetAlive() { return m_alive; }
 	Rect2D GetCollisionsBox() {

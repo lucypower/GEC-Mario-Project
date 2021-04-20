@@ -20,4 +20,5 @@
 
 #define INJURED_TIME  2.5f
 
-#define KOOPA_SPEED 96.0f
+#define KOOPA_SPEED 75.0f
+#define KOOPA_SPAWN_TIME 10.0f
