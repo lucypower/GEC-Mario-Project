@@ -1,5 +1,7 @@
 #include "Character.h"
 #include "constants.h"
+#include <thread>
+#include <chrono>
 
 Character::Character(SDL_Renderer* renderer, std::string imagePath, Vector2D start_position, LevelMap* map)
 {
@@ -16,7 +18,6 @@ Character::Character(SDL_Renderer* renderer, std::string imagePath, Vector2D sta
 	m_moving_right = false;
 
 	m_collision_radius = 20.0f;
-
 	m_alive = true;
 }
 
@@ -129,4 +130,18 @@ float Character::GetCollisionRadius()
 void Character::SetAlive(bool isAlive)
 {
 	m_alive = isAlive;
+}
+
+void Character::MarioDeath()
+{
+	m_position.x = m_position.y = -500;
+	m_position.x = 64;
+	m_position.y = 330;
+}
+
+void Character::LuigiDeath()
+{
+	m_position.x = m_position.y = -500;
+	m_position.x = 384;
+	m_position.y = 330;
 }

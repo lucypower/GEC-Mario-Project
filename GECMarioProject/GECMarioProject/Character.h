@@ -48,6 +48,8 @@ public:
 	void CancelJump() { return; } // returning m_jumping as false
 	void SetAlive(bool isAlive);
 	bool GetAlive() { return m_alive; }
+	void MarioDeath();
+	void LuigiDeath();
 	Rect2D GetCollisionsBox() {
 		return Rect2D(m_position.x, m_position.y,
 			m_texture->GetWidth(), m_texture->GetHeight());

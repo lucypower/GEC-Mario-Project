@@ -1,7 +1,7 @@
 #pragma once
 
 // screen dimensions
-#define SCREEN_WIDTH 512
+#define SCREEN_WIDTH  512
 #define SCREEN_HEIGHT 416
 
 #define MOVEMENTSPEED 100.0f;
@@ -20,5 +20,5 @@
 
 #define INJURED_TIME  2.5f
 
-#define KOOPA_SPEED 75.0f
+#define KOOPA_SPEED 50.0f
 #define KOOPA_SPAWN_TIME 10.0f

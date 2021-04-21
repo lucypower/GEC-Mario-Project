@@ -56,6 +56,10 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 			m_background_yPos = 0.0f;
 		}
 	}
+
+	koopaCountdown = KOOPA_SPAWN_TIME;
+	koopaCountdown -= deltaTime;
+
 	// update character
 	mario->Update(deltaTime, e);
 	luigi->Update(deltaTime, e);	
@@ -82,20 +86,18 @@ bool GameScreenLevel1::SetUpLevel()
 	{
 		std::cout << "Failed to load background texture!" << std::endl;
 		return false;
+	}		
+	
+	if (koopaCountdown <= 0.0f)
+	{
+		koopaCountdown = KOOPA_SPAWN_TIME;
+		CreateKoopa(Vector2D(32, 32), FACING_RIGHT, KOOPA_SPEED);
+		CreateKoopa(Vector2D(432, 32), FACING_LEFT, KOOPA_SPEED);
 	}
-
-	//koopaCountdown -= deltaTime;
-	//koopaCountdown = KOOPA_SPAWN_TIME;
-	//if (koopaCountdown <= 0.0f)
-	//{
-	//	koopaCountdown = KOOPA_SPAWN_TIME;
-	//	CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
-	//	CreateKoopa(Vector2D(352, 32), FACING_LEFT, KOOPA_SPEED);
-	//}
-	CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
-	CreateKoopa(Vector2D(352, 32), FACING_LEFT, KOOPA_SPEED);
-	CreateKoopa(Vector2D(90, 32), FACING_RIGHT, KOOPA_SPEED);
-	CreateKoopa(Vector2D(400, 32), FACING_LEFT, KOOPA_SPEED);
+	//CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
+	//CreateKoopa(Vector2D(352, 32), FACING_LEFT, KOOPA_SPEED);
+	//CreateKoopa(Vector2D(90, 32), FACING_RIGHT, KOOPA_SPEED);
+	//CreateKoopa(Vector2D(400, 32), FACING_LEFT, KOOPA_SPEED);
 
 	m_pow_block = new PowBlock(m_renderer, m_level_map);
 	m_screenshake = false;
@@ -118,7 +120,7 @@ void GameScreenLevel1::SetLevelMap()
 										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 										{ 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
 										{ 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1 },
-										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
 										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 										{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
 
@@ -144,6 +146,19 @@ void GameScreenLevel1::UpdatePowBlock()
 				DoScreenShake();
 				m_pow_block->TakeHit();
 				mario->CancelJump();
+			}
+		}
+	}
+	else if (Collisions::Instance()->Box(luigi->GetCollisionsBox(), m_pow_block->GetCollisionBox()))
+	{
+		if (&PowBlock::IsAvailable)
+		{
+			// collided while jumping
+			if (luigi->IsJumping())
+			{
+				DoScreenShake();
+				m_pow_block->TakeHit();
+				luigi->CancelJump();
 			}
 		}
 	}
@@ -201,7 +216,20 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 					}
 					else
 					{
-						// mario->death();
+						mario->MarioDeath();
+					}
+				}
+				else if (Collisions::Instance()->Circle(m_enemies[i], luigi))
+				{
+					std::cout << "Circle hit!" << std::endl;
+
+					if (m_enemies[i]->GetInjured())
+					{
+						m_enemies[i]->SetAlive(false);
+					}
+					else
+					{
+						luigi->LuigiDeath();
 					}
 				}
 			}

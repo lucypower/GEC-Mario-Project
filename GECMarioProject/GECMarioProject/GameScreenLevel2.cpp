@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include "Texture2D.h"
+#include "CharacterPeach.h"
 #include "CharacterMario.h"
 #include "CharacterLuigi.h"
 #include "Collisions.h"
@@ -16,9 +17,9 @@ GameScreenLevel2::GameScreenLevel2(SDL_Renderer* renderer) : GameScreen(renderer
 GameScreenLevel2::~GameScreenLevel2()
 {
 	m_background_texture = nullptr;
-	delete mario;
+	delete peach;
 	delete luigi;
-	mario = nullptr;
+	peach = nullptr;
 	luigi = nullptr;
 	delete m_pow_block;
 	m_pow_block = nullptr;
@@ -35,7 +36,7 @@ void GameScreenLevel2::Render()
 
 	// draw the background
 	m_background_texture->Render(Vector2D(0, m_background_yPos), SDL_FLIP_NONE);
-	mario->Render();
+	peach->Render();
 	luigi->Render();
 	m_pow_block->Render();
 }
@@ -58,17 +59,17 @@ void GameScreenLevel2::Update(float deltaTime, SDL_Event e)
 		}
 	}
 	// update character
-	mario->Update(deltaTime, e);
+	peach->Update(deltaTime, e);
 	luigi->Update(deltaTime, e);
 
 	UpdateEnemies(deltaTime, e);
 	UpdatePowBlock();
 
-	if (Collisions::Instance()->Circle(mario, luigi))
+	if (Collisions::Instance()->Circle(peach, luigi))
 	{
 		std::cout << "Circle hit!" << std::endl;
 	}
-	if (Collisions::Instance()->Box(mario->GetCollisionsBox(), luigi->GetCollisionsBox()))
+	if (Collisions::Instance()->Box(peach->GetCollisionsBox(), luigi->GetCollisionsBox()))
 	{
 		std::cout << "Box hit!" << std::endl;
 	}
@@ -111,15 +112,15 @@ bool GameScreenLevel2::SetUpLevel()
 		return false;
 	}
 
-	CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
-	CreateKoopa(Vector2D(352, 32), FACING_LEFT, KOOPA_SPEED);
+	CreateKoopa(Vector2D(32, 32), FACING_RIGHT, KOOPA_SPEED);
+	CreateKoopa(Vector2D(432, 32), FACING_LEFT, KOOPA_SPEED);
 
 	m_pow_block = new PowBlock(m_renderer, m_level_map);
 	m_screenshake = false;
 	m_background_yPos = 0.0f;
 
 	// set up player character
-	mario = new CharacterMario(m_renderer, "Images/Mario.png", Vector2D(64, 330), m_level_map);
+	peach = new CharacterMario(m_renderer, "Images/mario.png", Vector2D(64, 330), m_level_map);
 	luigi = new CharacterLuigi(m_renderer, "Images/Luigi.png", Vector2D(384, 330), m_level_map);
 }
 
@@ -140,59 +141,86 @@ void GameScreenLevel2::UpdateEnemies(float deltaTime, SDL_Event e)
 				{
 					m_enemies[i]->SetAlive(false);
 				}
+			}
+			// now do the update
+			m_enemies[i]->Update(deltaTime, e);
 
-				// now do the update
-				m_enemies[i]->Update(deltaTime, e);
+			// check to see if enemy collides with player
+			if ((m_enemies[i]->GetPosition().y > 300.0f || m_enemies[i]->GetPosition().y <= 64.0f) && (m_enemies[i]
+				->GetPosition().x < 64.0f || m_enemies[i]->GetPosition().x > SCREEN_WIDTH - 96.0f))
+			{
+				// ignore collisions if behind pipe
+			}
+			else
+			{
+				if (Collisions::Instance()->Circle(m_enemies[i], peach))
+				{
+					std::cout << "Circle hit!" << std::endl;
 
-				// check to see if enemy collides with player
-				if ((m_enemies[i]->GetPosition().y > 300.0f || m_enemies[i]->GetPosition().y <= 64.0f) && (m_enemies[i]
-					->GetPosition().x < 64.0f || m_enemies[i]->GetPosition().x > SCREEN_WIDTH - 96.0f))
-				{
-					// ignore collisions if behind pipe
-				}
-				else
-				{
-					if (Collisions::Instance()->Circle(m_enemies[i], mario))
+					if (m_enemies[i]->GetInjured())
 					{
-						if (m_enemies[i]->GetInjured())
-						{
-							m_enemies[i]->SetAlive(false);
-						}
-						else
-						{
-							// kill mario
-						}
+						m_enemies[i]->SetAlive(false);
+					}
+					else
+					{
+						peach->MarioDeath();
 					}
 				}
-
-				// if the enemy is no longer alive then schefule it for deletion
-				if (!m_enemies[i]->GetAlive())
+				else if (Collisions::Instance()->Circle(m_enemies[i], luigi))
 				{
-					enemyIndexToDelete = i;
+					std::cout << "Circle hit!" << std::endl;
+
+					if (m_enemies[i]->GetInjured())
+					{
+						m_enemies[i]->SetAlive(false);
+					}
+					else
+					{
+						luigi->LuigiDeath();
+					}
 				}
 			}
 
-			// remove dead enemies -1 each update
-			if (enemyIndexToDelete != -1)
+			// if the enemy is no longer alive then schefule it for deletion
+			if (!m_enemies[i]->GetAlive())
 			{
-				m_enemies.erase(m_enemies.begin() + enemyIndexToDelete);
+				enemyIndexToDelete = i;
 			}
+		}
+
+		// remove dead enemies -1 each update
+		if (enemyIndexToDelete != -1)
+		{
+			m_enemies.erase(m_enemies.begin() + enemyIndexToDelete);
 		}
 	}
 }
 
 void GameScreenLevel2::UpdatePowBlock()
 {
-	if (Collisions::Instance()->Box(mario->GetCollisionsBox(), m_pow_block->GetCollisionBox()))
+	if (Collisions::Instance()->Box(peach->GetCollisionsBox(), m_pow_block->GetCollisionBox()))
 	{
 		if (&PowBlock::IsAvailable)
 		{
 			// collided while jumping
-			if (mario->IsJumping())
+			if (peach->IsJumping())
 			{
 				DoScreenShake();
 				m_pow_block->TakeHit();
-				mario->CancelJump();
+				peach->CancelJump();
+			}
+		}
+	}
+	else if (Collisions::Instance()->Box(luigi->GetCollisionsBox(), m_pow_block->GetCollisionBox()))
+	{
+		if (&PowBlock::IsAvailable)
+		{
+			// collided while jumping
+			if (luigi->IsJumping())
+			{
+				DoScreenShake();
+				m_pow_block->TakeHit();
+				luigi->CancelJump();
 			}
 		}
 	}

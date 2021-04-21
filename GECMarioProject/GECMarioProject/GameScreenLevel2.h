@@ -19,7 +19,7 @@ class GameScreenLevel2 : public GameScreen
 private:
 
 	Texture2D* m_background_texture;
-	Character* mario;
+	Character* peach;
 	Character* luigi;
 	Character* koopa;
 	LevelMap* m_level_map;

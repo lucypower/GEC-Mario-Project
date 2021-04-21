@@ -47,6 +47,18 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 	// use the code within base class
 	Character::Update(deltaTime, e);
 
+	if ((m_position.x >= SCREEN_WIDTH - 50) or (m_position.x + m_single_sprite_w <= 20))
+	{
+		if (m_facing_direction == FACING_RIGHT)
+		{
+			m_facing_direction = FACING_LEFT;
+		}
+		else if (m_facing_direction == FACING_LEFT)
+		{
+			m_facing_direction = FACING_RIGHT;
+		}
+	}
+
 	if (!m_injured)
 	{
 		// enemy is not injured so move
@@ -72,7 +84,7 @@ void CharacterKoopa::Update(float deltaTime, SDL_Event e)
 
 		if (m_injured_time <= 0.0)
 			FlipRightwayUp();
-	}
+	}	
 }
 
 void CharacterKoopa::Render()
