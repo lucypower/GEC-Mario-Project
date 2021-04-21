@@ -112,8 +112,8 @@ bool GameScreenLevel2::SetUpLevel()
 		return false;
 	}
 
-	CreateKoopa(Vector2D(32, 32), FACING_RIGHT, KOOPA_SPEED);
-	CreateKoopa(Vector2D(432, 32), FACING_LEFT, KOOPA_SPEED);
+	CreateGoomba(Vector2D(32, 32), FACING_RIGHT, KOOPA_SPEED);
+	CreateGoomba(Vector2D(432, 32), FACING_LEFT, KOOPA_SPEED);
 
 	m_pow_block = new PowBlock(m_renderer, m_level_map);
 	m_screenshake = false;
@@ -227,10 +227,10 @@ void GameScreenLevel2::UpdatePowBlock()
 	return;
 }
 
-void GameScreenLevel2::CreateKoopa(Vector2D position, FACING direction, float speed)
+void GameScreenLevel2::CreateGoomba(Vector2D position, FACING direction, float speed)
 {
-	CharacterKoopa* koopa = new CharacterKoopa(m_renderer, "Images/koopa.png", m_level_map, position, direction, speed);
-	m_enemies.push_back(koopa);
+	CharacterGoomba* goomba = new CharacterGoomba(m_renderer, "Images/Goomba.png", m_level_map, position, direction, speed);
+	m_enemies.push_back(goomba);
 }
 
 void GameScreenLevel2::DoScreenShake()
@@ -239,7 +239,7 @@ void GameScreenLevel2::DoScreenShake()
 	m_shake_time = SHAKE_DURATION;
 	m_wobble = 0.0f;
 
-	for (unsigned int i = 1; i <= m_enemies.size(); i++)
+	for (unsigned int i = 1; i < m_enemies.size(); i++)
 	{
 		m_enemies[i]->TakeDamage();
 	}

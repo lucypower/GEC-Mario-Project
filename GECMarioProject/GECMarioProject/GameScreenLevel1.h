@@ -9,6 +9,8 @@
 #include "Collisions.h"
 #include <vector>
 #include "CharacterKoopa.h"
+#include "CharacterCoin.h"
+#include "SoundEffect.h"
 
 class Texture2D; // forward declaration saying we will use this class
 class Character;
@@ -22,11 +24,14 @@ private:
 	Character* mario;
 	Character* luigi;
 	Character* koopa;
+	Character* coin;
 	LevelMap* m_level_map;
 	PowBlock* m_pow_block;
+	SoundEffect* coinSound;
 
 	bool SetUpLevel();
 	void UpdateEnemies(float deltaTime, SDL_Event e);
+	void CreateCoin(Vector2D position, FACING direction, float speed);
 	void CreateKoopa(Vector2D position, FACING direction, float speed);
 	void SetLevelMap();	
 	void DoScreenShake();
@@ -35,9 +40,10 @@ private:
 	float m_shake_time;
 	float m_wobble;
 	float m_background_yPos;
-	float koopaCountdown;	
+	float koopaCountdown;		
 
 	std::vector<CharacterKoopa*> m_enemies;
+	std::vector<CharacterCoin*> m_coins;
 
 public:
 

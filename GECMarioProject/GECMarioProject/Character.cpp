@@ -134,14 +134,31 @@ void Character::SetAlive(bool isAlive)
 
 void Character::MarioDeath()
 {
-	m_position.x = m_position.y = -500;
-	m_position.x = 64;
-	m_position.y = 330;
+	if (marioLives > 0)
+	{
+		m_position.x = m_position.y = -600;
+		m_position.x = 64;
+		m_position.y = 330;
+		marioLives--;
+	}
+	else
+	{
+		m_position.x = m_position.y = -600;
+	}
+	
 }
 
 void Character::LuigiDeath()
 {
-	m_position.x = m_position.y = -500;
-	m_position.x = 384;
-	m_position.y = 330;
+	if (luigiLives >= 0)
+	{
+		m_position.x = m_position.y = -500;
+		m_position.x = 384;
+		m_position.y = 330;
+		luigiLives--;
+	}
+	else
+	{
+		m_position.x = m_position.y = -500;
+	}
 }

@@ -8,7 +8,7 @@
 #include "PowBlock.h"
 #include "Collisions.h"
 #include <vector>
-#include "CharacterKoopa.h"
+#include "CharacterGoomba.h"
 
 class Texture2D; // forward declaration saying we will use this class
 class Character;
@@ -21,13 +21,13 @@ private:
 	Texture2D* m_background_texture;
 	Character* peach;
 	Character* luigi;
-	Character* koopa;
+	Character* goomba;
 	LevelMap* m_level_map;
 	PowBlock* m_pow_block;
 
 	bool SetUpLevel();
 	void UpdateEnemies(float deltaTime, SDL_Event e);
-	void CreateKoopa(Vector2D position, FACING direction, float speed);
+	void CreateGoomba(Vector2D position, FACING direction, float speed);
 	void SetLevelMap();
 	void DoScreenShake();
 
@@ -36,7 +36,7 @@ private:
 	float m_wobble;
 	float m_background_yPos;
 
-	std::vector<CharacterKoopa*> m_enemies;
+	std::vector<CharacterGoomba*> m_enemies;
 
 public:
 

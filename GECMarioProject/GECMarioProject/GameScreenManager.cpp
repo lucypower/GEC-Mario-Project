@@ -37,19 +37,21 @@ void GameScreenManager::ChangeScreen(SCREENS new_screen)
 		delete m_current_screen;
 	}
 
-	GameScreenLevel2* tempScreen;
+	GameScreenLevel1* tempScreen;
 	GameScreenLevel2* tempScreen2;
 
 	switch (new_screen)
 	{
 	case SCREEN_LEVEL1:
-		tempScreen = new GameScreenLevel2(m_renderer);
+		tempScreen = new GameScreenLevel1(m_renderer);
 		m_current_screen = (GameScreen*)tempScreen;
 		tempScreen = nullptr;
-	/*case SCREEN_LEVEL2:
+		break;
+	case SCREEN_LEVEL2:
 		tempScreen2 = new GameScreenLevel2(m_renderer);
 		m_current_screen = (GameScreen*)tempScreen2;
-		tempScreen2 = nullptr;*/
+		tempScreen2 = nullptr;
+		break;
 	default:;
 	}
 }

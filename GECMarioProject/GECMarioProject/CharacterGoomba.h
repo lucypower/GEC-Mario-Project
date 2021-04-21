@@ -1,0 +1,31 @@
+#pragma once
+#ifndef _CHARACTERGOOMBA_H
+#define _CHARACTERGOOMBA_H
+#include "Character.h"
+
+class CharacterGoomba : public Character
+{
+private:
+
+	float m_single_sprite_w;
+	float m_single_sprite_h;
+	bool m_injured;
+	float m_injured_time;
+	float m_movement_speed;
+
+	void FlipRightwayUp();
+
+public:
+
+	CharacterGoomba(SDL_Renderer* renderer, std::string imagePath, LevelMap* map, Vector2D start_position, FACING start_facing, float movement_speed);
+	~CharacterGoomba();
+
+	void TakeDamage();
+	void Jump();
+	void Update(float deltaTime, SDL_Event e) override;
+	void Render() override;
+	bool GetInjured() { return m_injured; }
+
+};
+
+#endif
