@@ -7,10 +7,14 @@
 #include "LevelMap.h"
 #include "PowBlock.h"
 #include "Collisions.h"
-#include <vector>
 #include "CharacterKoopa.h"
 #include "CharacterCoin.h"
+#include "CharacterMario.h"
+#include "CharacterLuigi.h"
 #include "SoundEffect.h"
+#include <iostream>
+#include <vector>
+#include "Texture2D.h"
 
 class Texture2D; // forward declaration saying we will use this class
 class Character;

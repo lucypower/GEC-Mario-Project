@@ -1,1 +1,123 @@
-﻿  GECMarioProject.vcxproj -> C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\Debug\GECMarioProject.exe
+﻿  Character.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  CharacterCoin.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(10,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(11,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(65,51): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(65,51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(65,73): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(65,73): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(65,92): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(65,92): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(68,66): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(68,66): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(68,85): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterCoin.cpp(68,85): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  CharacterGoomba.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(11,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(12,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(92,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(96,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(99,44): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(99,44): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(99,63): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(99,63): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(102,66): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(102,66): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(102,85): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterGoomba.cpp(102,85): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  CharacterKoopa.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(11,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(12,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(92,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(96,10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(99,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(99,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(99,61): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(99,61): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(102,66): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(102,66): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(102,85): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterKoopa.cpp(102,85): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  CharacterLuigi.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterLuigi.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  CharacterMario.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Collisions.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameScreenLevel1.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,115): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterLuigi.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel1.cpp(24,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel1.cpp(29,20): warning C4018: '<': signed/unsigned mismatch
+  GameScreenLevel2.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,115): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterLuigi.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel2.cpp(24,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel2.cpp(29,20): warning C4018: '<': signed/unsigned mismatch
+  GameScreenLevel3.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,115): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterLuigi.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel3.cpp(24,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel3.cpp(28,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel3.cpp(33,20): warning C4018: '<': signed/unsigned mismatch
+  GameScreenMainMenu.cpp
+  GameScreenManager.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,115): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterLuigi.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Main.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(60,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,115): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\CharacterLuigi.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  The contents of <filesystem> are available only with C++17 or later.
+  PowBlock.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,115): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.h(18,91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(15,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(16,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(34,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(37,43): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(37,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(37,62): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(37,62): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(41,3): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(41,3): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(41,22): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\PowBlock.cpp(41,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  SoundEffect.cpp
+  Texture2D.cpp
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Texture2D.cpp(67,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Texture2D.cpp(67,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Texture2D.cpp(67,58): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Texture2D.cpp(67,58): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenMainMenu.cpp(31): warning C4715: 'GameScreenMainMenu::SetUpLevel': not all control paths return a value
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel3.cpp(153): warning C4715: 'GameScreenLevel3::SetUpLevel': not all control paths return a value
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel2.cpp(140): warning C4715: 'GameScreenLevel2::SetUpLevel': not all control paths return a value
+C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\GameScreenLevel1.cpp(115): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
+  GECMarioProject.vcxproj -> C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\Debug\GECMarioProject.exe

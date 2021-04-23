@@ -3,6 +3,8 @@
 #define _CHARACTERMARIO_H
 #include "Character.h"
 #include "Commons.h"
+#include "constants.h"
+#include "Texture2D.h"
 
 class CharacterMario : public Character
 {

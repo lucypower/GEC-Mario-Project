@@ -1,5 +1,4 @@
 #include "SoundEffect.h"
-#include <iostream>
 
 SoundEffect::SoundEffect()
 {

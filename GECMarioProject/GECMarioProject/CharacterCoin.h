@@ -2,6 +2,7 @@
 #ifndef _CHARACTERCOIN_H
 #define _CHARACTERCOIN_H
 #include "Character.h"
+#include "constants.h"
 
 class CharacterCoin : public Character
 {

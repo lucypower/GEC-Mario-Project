@@ -1,5 +1,4 @@
 #include "CharacterCoin.h"
-#include "constants.h"
 
 CharacterCoin::CharacterCoin(SDL_Renderer* renderer, std::string imagePath, LevelMap* map, Vector2D start_position, FACING start_facing, float movement_speed) :
 	Character(renderer, imagePath, start_position, map)

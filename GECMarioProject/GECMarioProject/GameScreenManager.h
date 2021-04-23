@@ -3,6 +3,11 @@
 #define _GAMESCREENMANAGER_H
 #include <SDL.h>
 #include "Commons.h"
+#include "GameScreen.h"
+#include "GameScreenLevel1.h"
+#include "GameScreenLevel2.h"
+#include "GameScreenMainMenu.h"
+#include "GameScreenLevel3.h"
 
 class GameScreen; // forward declaration
 

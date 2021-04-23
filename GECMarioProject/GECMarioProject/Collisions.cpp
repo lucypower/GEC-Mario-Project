@@ -1,5 +1,4 @@
 #include "Collisions.h"
-#include "Character.h"
 
 // initialise instance to nullptr
 Collisions* Collisions::m_instance = nullptr;

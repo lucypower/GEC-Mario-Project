@@ -1,7 +1,4 @@
 #include "Character.h"
-#include "constants.h"
-#include <thread>
-#include <chrono>
 
 Character::Character(SDL_Renderer* renderer, std::string imagePath, Vector2D start_position, LevelMap* map)
 {

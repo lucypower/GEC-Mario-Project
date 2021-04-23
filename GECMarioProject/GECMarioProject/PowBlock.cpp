@@ -1,5 +1,4 @@
 #include "PowBlock.h"
-#include <iostream>
 
 PowBlock::PowBlock(SDL_Renderer* renderer, LevelMap* map)
 {

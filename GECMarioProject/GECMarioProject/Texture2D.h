@@ -4,6 +4,8 @@
 #include <SDL.h>
 #include <string>
 #include "Commons.h"
+#include <SDL_image.h>
+#include <iostream>
 
 class Texture2D
 {

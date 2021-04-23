@@ -164,11 +164,13 @@ bool Update()
 	case SDLK_ESCAPE:
 		return true;
 		break;
-	case SDLK_1:
-		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL1);
+	case SDLK_SPACE:
+		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL2);
 		break;
 	case SDLK_2:
-		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL2);
+		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL3);
+	case SDLK_3:
+		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL4);
 	}
 	
 

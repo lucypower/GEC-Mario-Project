@@ -3,6 +3,7 @@
 #define _SOUNDEFFECT_H
 #include <string>
 #include <SDL_mixer.h>
+#include <iostream>
 
 class SoundEffect
 {

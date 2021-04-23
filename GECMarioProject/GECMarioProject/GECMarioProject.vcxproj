@@ -152,6 +152,8 @@
     <ClCompile Include="GameScreen.cpp" />
     <ClCompile Include="GameScreenLevel1.cpp" />
     <ClCompile Include="GameScreenLevel2.cpp" />
+    <ClCompile Include="GameScreenLevel3.cpp" />
+    <ClCompile Include="GameScreenMainMenu.cpp" />
     <ClCompile Include="GameScreenManager.cpp" />
     <ClCompile Include="LevelMap.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -178,6 +180,8 @@
     <ClInclude Include="GameScreen.h" />
     <ClInclude Include="GameScreenLevel1.h" />
     <ClInclude Include="GameScreenLevel2.h" />
+    <ClInclude Include="GameScreenLevel3.h" />
+    <ClInclude Include="GameScreenMainMenu.h" />
     <ClInclude Include="GameScreenManager.h" />
     <ClInclude Include="LevelMap.h" />
     <ClInclude Include="PowBlock.h" />

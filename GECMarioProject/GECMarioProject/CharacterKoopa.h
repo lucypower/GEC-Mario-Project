@@ -2,6 +2,7 @@
 #ifndef _CHARACTERKOOPA_H
 #define _CHARACTERKOOPA_H
 #include "Character.h"
+#include "constants.h"
 
 class CharacterKoopa : public Character
 {

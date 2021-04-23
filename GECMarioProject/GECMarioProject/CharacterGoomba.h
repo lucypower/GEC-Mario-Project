@@ -2,6 +2,7 @@
 #ifndef _CHARACTERGOOMBA_H
 #define _CHARACTERGOOMBA_H
 #include "Character.h"
+#include "constants.h"
 
 class CharacterGoomba : public Character
 {

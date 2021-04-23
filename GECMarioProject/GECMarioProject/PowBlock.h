@@ -5,6 +5,7 @@
 #include "LevelMap.h"
 #include "commons.h"
 #include "Texture2D.h"
+#include <iostream>
 
 class PowBlock
 {

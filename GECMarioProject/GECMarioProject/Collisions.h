@@ -1,7 +1,7 @@
 #pragma once
 #ifndef _COLLISIONS_H
 #define _COLLISIONS_H
-
+#include "Character.h"
 #include "Commons.h"
 
 class Character;

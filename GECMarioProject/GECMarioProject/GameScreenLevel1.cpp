@@ -1,10 +1,4 @@
 #include "GameScreenLevel1.h"
-#include <iostream>
-#include <vector>
-#include "Texture2D.h"
-#include "CharacterMario.h"
-#include "CharacterLuigi.h"
-#include "Collisions.h"
 
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {

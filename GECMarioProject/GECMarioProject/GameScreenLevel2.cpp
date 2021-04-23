@@ -1,11 +1,4 @@
 #include "GameScreenLevel2.h"
-#include <iostream>
-#include <vector>
-#include "Texture2D.h"
-#include "CharacterPeach.h"
-#include "CharacterMario.h"
-#include "CharacterLuigi.h"
-#include "Collisions.h"
 
 GameScreenLevel2::GameScreenLevel2(SDL_Renderer* renderer) : GameScreen(renderer)
 {
@@ -134,7 +127,7 @@ bool GameScreenLevel2::SetUpLevel()
 		std::cout << "Failed to load background texture!" << std::endl;
 		return false;
 	}
-
+	
 	m_pow_block = new PowBlock(m_renderer, m_level_map);
 	m_screenshake = false;
 	m_background_yPos = 0.0f;
@@ -306,12 +299,6 @@ void GameScreenLevel2::UpdatePowBlock()
 	return;
 }
 
-void GameScreenLevel2::CreateGoomba(Vector2D position, FACING direction, float speed)
-{
-	CharacterGoomba* goomba = new CharacterGoomba(m_renderer, "Images/Goomba.png", m_level_map, position, direction, speed);
-	m_enemies.push_back(goomba);
-}
-
 void GameScreenLevel2::DoScreenShake()
 {
 	m_screenshake = true;
@@ -323,6 +310,13 @@ void GameScreenLevel2::DoScreenShake()
 		m_enemies[i]->TakeDamage();
 	}
 }
+
+void GameScreenLevel2::CreateGoomba(Vector2D position, FACING direction, float speed)
+{
+	CharacterGoomba* goomba = new CharacterGoomba(m_renderer, "Images/Goomba.png", m_level_map, position, direction, speed);
+	m_enemies.push_back(goomba);
+}
+
 
 void GameScreenLevel2::CreateCoin(Vector2D position, FACING direction, float speed)
 {
