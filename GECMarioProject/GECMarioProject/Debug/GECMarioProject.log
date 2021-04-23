@@ -1,4 +1,1 @@
-﻿  Character.cpp
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(57,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\GECMarioProject\Character.h(57,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  GECMarioProject.vcxproj -> C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\Debug\GECMarioProject.exe
+﻿  GECMarioProject.vcxproj -> C:\Users\lcypw\OneDrive\Documents\University\Semester 2\GEC-Mario-Project\GECMarioProject\Debug\GECMarioProject.exe

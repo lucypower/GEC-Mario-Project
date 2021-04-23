@@ -9,6 +9,7 @@
 #include "Collisions.h"
 #include <vector>
 #include "CharacterGoomba.h"
+#include "CharacterCoin.h"
 
 class Texture2D; // forward declaration saying we will use this class
 class Character;
@@ -19,15 +20,18 @@ class GameScreenLevel2 : public GameScreen
 private:
 
 	Texture2D* m_background_texture;
-	Character* peach;
+	Character* mario;
 	Character* luigi;
 	Character* goomba;
+	Character* coin;
 	LevelMap* m_level_map;
 	PowBlock* m_pow_block;
+	Mix_Chunk* coinSound;
 
 	bool SetUpLevel();
 	void UpdateEnemies(float deltaTime, SDL_Event e);
 	void CreateGoomba(Vector2D position, FACING direction, float speed);
+	void CreateCoin(Vector2D position, FACING direction, float speed);
 	void SetLevelMap();
 	void DoScreenShake();
 
@@ -35,8 +39,11 @@ private:
 	float m_shake_time;
 	float m_wobble;
 	float m_background_yPos;
+	float goombaCountdown;
+	float coinCountdown;
 
 	std::vector<CharacterGoomba*> m_enemies;
+	std::vector<CharacterCoin*> m_coins;
 
 public:
 

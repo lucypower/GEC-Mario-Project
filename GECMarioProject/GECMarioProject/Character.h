@@ -6,6 +6,7 @@
 #include "Commons.h"
 #include "Texture2D.h"
 #include "LevelMap.h"
+#include <SDL_mixer.h>
 
 class Texture2D;
 
@@ -33,6 +34,7 @@ protected:
 private:	
 
 	LevelMap* m_current_level_map;
+	Mix_Chunk* jumpSound = Mix_LoadWAV("Music/MarioJump.mp3");
 
 public:
 

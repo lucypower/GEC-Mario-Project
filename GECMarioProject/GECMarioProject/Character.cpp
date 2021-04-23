@@ -19,6 +19,8 @@ Character::Character(SDL_Renderer* renderer, std::string imagePath, Vector2D sta
 
 	m_collision_radius = 20.0f;
 	m_alive = true;
+
+	
 }
 
 Character::~Character()
@@ -113,13 +115,14 @@ void Character::AddGravity(float deltaTime)
 }
 
 void Character::Jump()
-{
+{	
 	if (!m_jumping)
-	{
+	{		
 		m_jump_force = INITIAL_JUMP_FORCE;
 		m_can_jump = false;
-		m_jumping = true;		
-	}
+		m_jumping = true;			
+	}	
+	Mix_PlayChannel(-1, jumpSound, 0);
 }
 
 float Character::GetCollisionRadius()

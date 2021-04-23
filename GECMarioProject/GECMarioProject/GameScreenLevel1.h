@@ -27,7 +27,7 @@ private:
 	Character* coin;
 	LevelMap* m_level_map;
 	PowBlock* m_pow_block;
-	SoundEffect* coinSound;
+	Mix_Chunk* coinSound;
 
 	bool SetUpLevel();
 	void UpdateEnemies(float deltaTime, SDL_Event e);
@@ -40,7 +40,8 @@ private:
 	float m_shake_time;
 	float m_wobble;
 	float m_background_yPos;
-	float koopaCountdown;		
+	float koopaCountdown;	
+	float coinCountdown;
 
 	std::vector<CharacterKoopa*> m_enemies;
 	std::vector<CharacterCoin*> m_coins;

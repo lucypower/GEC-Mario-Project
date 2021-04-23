@@ -8,9 +8,7 @@
 
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {
-	SetUpLevel();
-
-	m_level_map = nullptr;
+	SetUpLevel();	
 }
 
 GameScreenLevel1::~GameScreenLevel1()
@@ -23,6 +21,7 @@ GameScreenLevel1::~GameScreenLevel1()
 	delete m_pow_block;
 	m_pow_block = nullptr;
 	m_enemies.clear();
+	m_coins.clear();
 }
 
 void GameScreenLevel1::Render()
@@ -32,6 +31,7 @@ void GameScreenLevel1::Render()
 	{
 		m_enemies[i]->Render();
 	}
+	// draw the coins
 	for (int i = 0; i < m_coins.size(); i++)
 	{
 		m_coins[i]->Render();
@@ -43,6 +43,7 @@ void GameScreenLevel1::Render()
 	luigi->Render();
 	m_pow_block->Render();
 }
+
 void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 {
 	// do screenshake if required
@@ -61,9 +62,24 @@ void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 		}
 	}
 
-	//koopaCountdown = KOOPA_SPAWN_TIME;
+	// continuously load more enemies/coins
 	koopaCountdown -= deltaTime;
+
+	if (koopaCountdown <= 0.0f)
+	{
+		CreateKoopa(Vector2D(32, 32), FACING_RIGHT, KOOPA_SPEED);
+		CreateKoopa(Vector2D(432, 32), FACING_LEFT, KOOPA_SPEED);
+		koopaCountdown = SPAWN_TIME;
+	}
 	
+	coinCountdown -= deltaTime;
+
+	if (coinCountdown <= 0.0f)
+	{
+		CreateCoin(Vector2D(96, 32), FACING_RIGHT, COIN_SPEED);
+		CreateCoin(Vector2D(368, 32), FACING_LEFT, COIN_SPEED);
+		coinCountdown = SPAWN_TIME;
+	}
 
 	// update character
 	mario->Update(deltaTime, e);
@@ -92,27 +108,16 @@ bool GameScreenLevel1::SetUpLevel()
 		std::cout << "Failed to load background texture!" << std::endl;
 		return false;
 	}		
-	
-	if (koopaCountdown <= 0.0f)
-	{
-		CreateKoopa(Vector2D(32, 32), FACING_RIGHT, KOOPA_SPEED);
-		CreateKoopa(Vector2D(432, 32), FACING_LEFT, KOOPA_SPEED);
-		koopaCountdown = KOOPA_SPAWN_TIME;
-	}
-	//CreateKoopa(Vector2D(150, 32), FACING_RIGHT, KOOPA_SPEED);
-	//CreateKoopa(Vector2D(352, 32), FACING_LEFT, KOOPA_SPEED);
-	//CreateKoopa(Vector2D(90, 32), FACING_RIGHT, KOOPA_SPEED);
-	//CreateKoopa(Vector2D(400, 32), FACING_LEFT, KOOPA_SPEED);
 
 	m_pow_block = new PowBlock(m_renderer, m_level_map);
 	m_screenshake = false;
-	m_background_yPos = 0.0f;
-
-	CreateCoin(Vector2D(150, 32), FACING_RIGHT, COIN_SPEED);
+	m_background_yPos = 0.0f;	
 
 	// set up player character
 	mario = new CharacterMario(m_renderer, "Images/Mario.png", Vector2D(64, 330), m_level_map);
 	luigi = new CharacterLuigi(m_renderer, "Images/Luigi.png", Vector2D(384, 330), m_level_map);
+	
+	coinSound = Mix_LoadWAV("Music/MarioCoin.mp3");
 }
 
 void GameScreenLevel1::SetLevelMap()
@@ -287,14 +292,14 @@ void GameScreenLevel1::UpdateEnemies(float deltaTime, SDL_Event e)
 					std::cout << "Circle hit!" << std::endl;
 
 					m_coins[i]->SetAlive(false);
-					coinSound->Load("Music/MarioCoin.wav");
-					coinSound->Play();
+					Mix_PlayChannel(-1, coinSound, 0);
 				}
-				else if (Collisions::Instance()->Circle(m_enemies[i], luigi))
+				else if (Collisions::Instance()->Circle(m_coins[i], luigi))
 				{
 					std::cout << "Circle hit!" << std::endl;
 
 					m_coins[i]->SetAlive(false);
+					Mix_PlayChannel(-1, coinSound, 0);
 				}
 			}
 

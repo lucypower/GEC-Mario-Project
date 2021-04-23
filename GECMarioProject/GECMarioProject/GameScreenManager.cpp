@@ -27,6 +27,7 @@ void GameScreenManager::Render()
 void GameScreenManager::Update(float deltaTime, SDL_Event e)
 {
 	m_current_screen->Update(deltaTime, e);
+	
 }
 
 void GameScreenManager::ChangeScreen(SCREENS new_screen)
@@ -54,4 +55,8 @@ void GameScreenManager::ChangeScreen(SCREENS new_screen)
 		break;
 	default:;
 	}
+
+	
+
+
 }

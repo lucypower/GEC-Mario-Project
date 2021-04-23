@@ -17,7 +17,7 @@ SoundEffect::~SoundEffect()
 
 void SoundEffect::Play()
 {
-	Mix_PlayChannel(-1, nullptr, 0);
+	Mix_PlayChannel(-1, m_music, 0);
 }
 
 void SoundEffect::Load(std::string path)
